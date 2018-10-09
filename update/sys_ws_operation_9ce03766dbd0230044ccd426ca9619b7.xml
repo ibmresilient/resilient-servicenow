@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/x_261673_resilient/api/add</default_operation_uri>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>add</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	//Declare CONSTANTS
+	var TABLE_NAME_TO_ADD = 'incident';
+	
+	//Declare global variables
+	var record = null;
+	var response_body = {};
+    var req = request.body.data;
+	
+	record = new GlideRecord(TABLE_NAME_TO_ADD);
+
+	//Get the record using sn_ref_id
+	record.addQuery("number", req.sn_ref_id);
+	record.query();
+	record.next();
+
+	//Switch on the type: "comment", "attachment" or "artifact"
+	switch(req.type){
+		case "comment":
+			var comment_type = req.sn_comment_type;
+			var comment_text = req.sn_comment_text;
+			if(comment_type == "work_note"){
+				record.work_notes = comment_text;
+			}
+			else if(comment_type == "additional_comment"){
+				record.comments = comment_text;
+			}
+			break;
+		
+		case "attachment":
+			var sys_attachment = new GlideSysAttachment();
+			response_body["attachment_id"] = sys_attachment.writeBase64(record, req.attachment_name, req.attachment_content_type, req.attachment_base64);
+	}
+
+	//Update the record
+	record.update();
+	
+	response_body["sn_ref_id"] = req.sn_ref_id;
+	
+	response.setBody(response_body);
+	
+
+	return response;
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_261673_resilient/v1/api/add</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/add</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-05 16:55:44</sys_created_on>
+        <sys_id>9ce03766dbd0230044ccd426ca9619b7</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>add</sys_name>
+        <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
+        <sys_update_name>sys_ws_operation_9ce03766dbd0230044ccd426ca9619b7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-18 11:28:54</sys_updated_on>
+        <web_service_definition display_value="api">83eb9156db50230044ccd426ca961989</web_service_definition>
+        <web_service_version display_value="v1">047c5192db50230044ccd426ca9619bf</web_service_version>
+    </sys_ws_operation>
+</record_update>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/x_261673_resilient/api/update</default_operation_uri>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>PATCH</http_method>
+        <name>update</name>
+        <operation_script><![CDATA[// (c) Copyright IBM Corp. 2019. All Rights Reserved.
+
+// Script that runs for the following endpoint:: 
+// https://service-now-host.com/api/x_261673_resilient/api/update
+
+
+(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	//Declare global variables
+	var record, field, fields = null;
+	var response_body = {};
+	var req = request.body.data;
+	
+	record = new GlideRecord(req.sn_table_name);
+
+	//Get the record using sn_ref_id
+	record.addQuery("number", req.sn_ref_id);
+	record.query();
+	record.next();
+
+	// If record not found, respond with error
+	if(!record.isValid()){
+		response.setError(new sn_ws_err.BadRequestError("Could not find a ServiceNow Record with Number: " + req.sn_ref_id + " in table: " + req.sn_table_name));
+		return response;
+	}
+
+	fields = req.sn_update_fields;
+
+	for (var i=0; i<fields.length; i++){
+		field = fields[i];
+		if(record.isValidField(field.name)){
+			record[field.name] = field.value;
+			record.setValue(field.name, field.value);
+		}
+		else{
+			gs.warning(field.name + " is not a valid field in the " + sn_table_name + " table!");
+		}
+	}
+
+	//Update the record
+	record.update();
+	
+	response_body["sn_ref_id"] = req.sn_ref_id;
+	
+	response.setBody(response_body);
+	
+	return response;
+
+})(request, response);
+]]></operation_script>
+        <operation_uri>/api/x_261673_resilient/v1/api/update</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/update</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-05 14:22:16</sys_created_on>
+        <sys_id>538887b3db93230044ccd426ca9619ea</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>update</sys_name>
+        <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
+        <sys_update_name>sys_ws_operation_538887b3db93230044ccd426ca9619ea</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-06 08:52:56</sys_updated_on>
+        <web_service_definition display_value="api">83eb9156db50230044ccd426ca961989</web_service_definition>
+        <web_service_version display_value="v1">047c5192db50230044ccd426ca9619bf</web_service_version>
+    </sys_ws_operation>
+</record_update>

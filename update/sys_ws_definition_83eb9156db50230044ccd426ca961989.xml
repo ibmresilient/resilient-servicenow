@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_definition">
+    <sys_ws_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_uri>/api/x_261673_resilient/api</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>v1</default_version>
+        <doc_link/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <is_versioned>true</is_versioned>
+        <name>api</name>
+        <namespace>x_261673_resilient</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>api</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-04 11:21:45</sys_created_on>
+        <sys_id>83eb9156db50230044ccd426ca961989</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>api</sys_name>
+        <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
+        <sys_update_name>sys_ws_definition_83eb9156db50230044ccd426ca961989</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-04 11:22:03</sys_updated_on>
+    </sys_ws_definition>
+</record_update>

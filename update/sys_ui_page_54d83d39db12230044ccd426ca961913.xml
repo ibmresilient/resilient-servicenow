@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function doTestConnection(){
+	return true;
+}]]></client_script>
+        <description>Test your connection to IBM Resilient from ServiceNow</description>
+        <direct>false</direct>
+        <endpoint>x_261673_resilient_Test_Connection.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<style>
+		.res-container {
+			margin: auto;
+			width: 500px;
+			height: 175px;
+			border: 2px solid #82bc00;
+			padding: 10px;
+			-webkit-box-shadow: 10px 10px 5px -1px rgba(237,237,237,1);
+			-moz-box-shadow: 10px 10px 5px -1px rgba(237,237,237,1);
+			box-shadow: 10px 10px 5px -1px rgba(237,237,237,1);
+		}
+		
+		.res-container .res-logo{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		}
+		
+		.res-container h3 {
+			text-align: center;
+			margin: 20px 0px 20px 0px;
+		}
+		
+		.res-container .btn-primary{
+			background-color: #82bc00;
+			border-color: #639001;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 35%;
+		}
+
+		.res-container p{
+			text-align: center;
+			margin: 5px;
+		}
+
+	</style>
+	<div class="res-container">
+		<img class="res-logo" alt="ibm_resilient_logo" src="ibm_resilient_logo.png"/>
+		<g:ui_form>
+			<h3>Test IBM Resilient Connection</h3>
+			<button class="btn btn-primary" type="submit" onclick="doTestConnection()">Test Connection</button>
+		</g:ui_form>
+		<a target="_blank" href="system_properties_ui.do?sysparm_title=IBM Resilient Properties$[AMP]sysparm_category=Resilient Properties"> 
+			<p>Click here to update IBM Resilient Properties</p>
+		</a>
+	</div>
+</j:jelly>]]></html>
+        <name>Test_Connection</name>
+        <processing_script><![CDATA[try {
+	var res_helper = new ResilientHelper();
+
+	var snUsername = gs.getProperty("x_261673_resilient.ServiceNowUsername");
+
+	if(res_helper.isValidSnUsername(snUsername) == false){
+		throw snUsername + " is not a valid ServiceNow user. Please check your IBM Resilient Properties.";
+	}
+	else{
+		gs.addInfoMessage("Connection Test Successful!");
+	}
+}
+catch (errMsg){
+	gs.addErrorMessage("Connection Test Failed! Check Application Logs");
+	gs.addErrorMessage(errMsg);
+	gs.error(errMsg);
+}]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-11 10:15:40</sys_created_on>
+        <sys_id>54d83d39db12230044ccd426ca961913</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Test_Connection</sys_name>
+        <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
+        <sys_update_name>sys_ui_page_54d83d39db12230044ccd426ca961913</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-02 00:27:22</sys_updated_on>
+    </sys_ui_page>
+</record_update>

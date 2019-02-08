@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>off,error,warn,info,debug</choices>
+        <description>Control the Logging Verbosity of this IBM Resilient app (Default=error)</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_261673_resilient.logging.verbosity</name>
+        <read_roles>x_261673_resilient.user</read_roles>
+        <suffix>logging.verbosity</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-01 14:53:28</sys_created_on>
+        <sys_id>2b4aee62db93230044ccd426ca96197f</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>x_261673_resilient.logging.verbosity</sys_name>
+        <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
+        <sys_update_name>sys_properties_2b4aee62db93230044ccd426ca96197f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-06 09:57:01</sys_updated_on>
+        <type>choicelist</type>
+        <value>error</value>
+        <write_roles>x_261673_resilient.admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=2b4aee62db93230044ccd426ca96197f"/>
+</record_update>

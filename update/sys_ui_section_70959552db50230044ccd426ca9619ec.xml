@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="IBM Resilient" section_id="70959552db50230044ccd426ca9619ec" sys_domain="global" table="incident" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_261673_resilient_reference_id</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-17 16:28:22</sys_created_on>
+            <sys_id>92eef7ccdbd1230044ccd426ca9619c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Resilient" display_value="IBM Resilient" name="incident" sys_domain="global" view="Default view">70959552db50230044ccd426ca9619ec</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-17 16:28:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_261673_resilient_type</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-17 16:28:22</sys_created_on>
+            <sys_id>5aeef7ccdbd1230044ccd426ca9619c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Resilient" display_value="IBM Resilient" name="incident" sys_domain="global" view="Default view">70959552db50230044ccd426ca9619ec</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-17 16:28:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_261673_resilient_track_changes</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-17 16:28:22</sys_created_on>
+            <sys_id>daeef7ccdbd1230044ccd426ca9619c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Resilient" display_value="IBM Resilient" name="incident" sys_domain="global" view="Default view">70959552db50230044ccd426ca9619ec</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-17 16:28:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_261673_resilient_reference_link</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-17 16:28:22</sys_created_on>
+            <sys_id>5eeef7ccdbd1230044ccd426ca9619c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Resilient" display_value="IBM Resilient" name="incident" sys_domain="global" view="Default view">70959552db50230044ccd426ca9619ec</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-17 16:28:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_261673_resilient_reference_to_resilient_incidents</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-17 16:28:22</sys_created_on>
+            <sys_id>deeef7ccdbd1230044ccd426ca9619c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Resilient" display_value="IBM Resilient" name="incident" sys_domain="global" view="Default view">70959552db50230044ccd426ca9619ec</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-17 16:28:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>IBM Resilient</caption>
+            <header>false</header>
+            <name>incident</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-09-04 10:52:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>70959552db50230044ccd426ca9619ec</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>IBM Resilient</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
+            <sys_update_name>sys_ui_section_70959552db50230044ccd426ca9619ec</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-09-26 14:26:29</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

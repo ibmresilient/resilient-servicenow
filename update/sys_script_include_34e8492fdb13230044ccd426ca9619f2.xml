@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_261673_resilient.CreateTask</api_name>
+        <client_callable>true</client_callable>
+        <description>Class that is called from the Create Resilient Task UI Action to create a Task in IBM Resilient</description>
+        <name>CreateTask</name>
+        <script><![CDATA[// (c) Copyright IBM Corp. 2019. All Rights Reserved.
+
+var CreateTask = Class.create();
+CreateTask.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    type: "CreateTask",
+	
+	createTask: function(){
+		
+		var snTableName, recordSysId, incidentId, record, wfVars, wfId, wf = null;
+		
+		//Get parameters from Ajax Client call
+		snTableName = this.getParameter("sysparm_snTableName");
+		recordSysId = this.getParameter("sysparm_recordSysId");
+		incidentId = this.getParameter("sysparm_incidentId");
+		
+		//Get the GlideRecord using Table Name and sys_id
+		record = new GlideRecord(snTableName);
+		record.addQuery("sys_id", recordSysId);
+		record.query();
+		record.next();
+					
+		//Instantiate new Workflow object (use global. as in Scoped Application)
+		wf = new global.Workflow();
+
+		//Set workflow variable
+		wfVars = { 
+			"u_ibm_resilient_incident_id": incidentId 
+		};
+
+		//Check if user has defined a custom workflow
+		wfId = wf.getWorkflowFromName("CUSTOM_RES_WF_CreateTask");
+
+		//If there is no custom workflow, run the default one
+		if(wfId == null){
+			wfId = wf.getWorkflowFromName("RES_WF_CreateTask");
+		}
+
+		//Start the workflow
+		wf.startFlow(wfId, record, null, wfVars);
+	}
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-04 10:24:07</sys_created_on>
+        <sys_id>34e8492fdb13230044ccd426ca9619f2</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>CreateTask</sys_name>
+        <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
+        <sys_update_name>sys_script_include_34e8492fdb13230044ccd426ca9619f2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-04 12:24:25</sys_updated_on>
+    </sys_script_include>
+</record_update>

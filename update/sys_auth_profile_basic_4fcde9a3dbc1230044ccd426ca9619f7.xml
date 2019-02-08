@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_auth_profile_basic">
+    <sys_auth_profile_basic action="INSERT_OR_UPDATE">
+        <name>test_auth_two</name>
+        <password>Y5Wmxr6IWCzagevfFvCEIw==</password>
+        <sys_class_name>sys_auth_profile_basic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-15 16:37:46</sys_created_on>
+        <sys_id>4fcde9a3dbc1230044ccd426ca9619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>test_auth_two</sys_name>
+        <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
+        <sys_update_name>sys_auth_profile_basic_4fcde9a3dbc1230044ccd426ca9619f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-15 16:37:46</sys_updated_on>
+        <username>admin@res.com</username>
+    </sys_auth_profile_basic>
+</record_update>

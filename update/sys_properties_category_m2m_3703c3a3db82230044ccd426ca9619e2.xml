@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Resilient Properties">85f283a3db82230044ccd426ca9619df</category>
+        <order>400</order>
+        <property display_value="x_261673_resilient.ResilientUserPassword" name="x_261673_resilient.ResilientUserPassword">46c775bbdbc9230044ccd426ca9619a2</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-04 15:52:41</sys_created_on>
+        <sys_id>3703c3a3db82230044ccd426ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_261673_resilient.ResilientUserPassword.Resilient Properties</sys_name>
+        <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_3703c3a3db82230044ccd426ca9619e2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-04 15:52:41</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

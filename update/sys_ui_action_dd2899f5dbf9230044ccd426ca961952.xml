@@ -32,38 +32,35 @@
 	
 	//Prompt user to enter incidentId
 	incidentId = prompt("Enter Resilient Incident ID to add task to:");
-	
-	//Validate incidentId
-	if(!re.test(incidentId)){
-		alert("ERROR: "+incidentId+" is NOT a valid Resilient Incident ID");
-	}
-	
-	else{
-		//Create new GlideAjax on our CreateTask Script Include
-		ga = new GlideAjax("CreateTask");
 
-		//Set the name of the function we want to call
-		ga.addParam("sysparm_name", "createTask");
+	// IncidentId will be null if the user clicks cancel
+	if(incidentId != null){
 
-		//Set the variables 
-		ga.addParam("sysparm_snTableName", g_form.getTableName());
-		ga.addParam("sysparm_recordSysId", g_form.getUniqueValue());
-		ga.addParam("sysparm_incidentId", incidentId);
+		//Validate incidentId
+		if(!re.test(incidentId)){
+			alert("ERROR: "+incidentId+" is NOT a valid Resilient Incident ID");
+		}
 		
-		//Call the function createTask()
-		ga.getXML();
+		else{
+			//Create new GlideAjax on our CreateTask Script Include
+			ga = new GlideAjax("CreateTask");
 
-		//Call this UI Action and skip the "onclick" function 
-		gsftSubmit(null, g_form.getFormElement(), "create_new_ibm_resilient_task");
+			//Set the name of the function we want to call
+			ga.addParam("sysparm_name", "createTask");
+
+			//Set the variables 
+			ga.addParam("sysparm_snTableName", g_form.getTableName());
+			ga.addParam("sysparm_recordSysId", g_form.getUniqueValue());
+			ga.addParam("sysparm_incidentId", incidentId);
+			
+			//Call the function createTask()
+			ga.getXML();
+
+			//Call this UI Action and skip the "onclick" function 
+			gsftSubmit(null, g_form.getFormElement(), "create_new_ibm_resilient_task");
+		}
 	}
-}
-
-if(typeof window == "undefined"){
-	//This is called from line 32L gsftSubmit... because Action Name == create_new_ibm_resilient_task
-	action.setRedirectURL(current);
-	gs.addInfoMessage("Creating a Task in Resilient from this record");
-}
-]]></script>
+}]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -74,7 +71,7 @@ if(typeof window == "undefined"){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>dd2899f5dbf9230044ccd426ca961952</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>Create Resilient Task</sys_name>
         <sys_overrides/>
         <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
@@ -82,7 +79,7 @@ if(typeof window == "undefined"){
         <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
         <sys_update_name>sys_ui_action_dd2899f5dbf9230044ccd426ca961952</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-02-04 13:53:03</sys_updated_on>
+        <sys_updated_on>2019-02-13 15:04:20</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>

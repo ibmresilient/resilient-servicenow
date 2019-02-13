@@ -36,7 +36,8 @@
 		return {
 			"res_id": req.id,
 			"sn_sys_id": record.getValue('sys_id'),
-			"sn_ref_id": record.getValue('number')
+			"sn_ref_id": record.getValue('number'),
+			"sn_state": record.state.getChoiceValue()
 		};
 	}
 	
@@ -129,14 +130,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-04 11:26:21</sys_created_on>
         <sys_id>e17cd556db50230044ccd426ca9619df</sys_id>
-        <sys_mod_count>73</sys_mod_count>
+        <sys_mod_count>74</sys_mod_count>
         <sys_name>create</sys_name>
         <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
         <sys_policy/>
         <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
         <sys_update_name>sys_ws_operation_e17cd556db50230044ccd426ca9619df</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-02-06 08:51:42</sys_updated_on>
+        <sys_updated_on>2019-02-13 11:05:01</sys_updated_on>
         <web_service_definition display_value="api">83eb9156db50230044ccd426ca961989</web_service_definition>
         <web_service_version display_value="v1">047c5192db50230044ccd426ca9619bf</web_service_version>
     </sys_ws_operation>

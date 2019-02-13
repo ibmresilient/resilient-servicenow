@@ -23,15 +23,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-04 10:32:50</sys_created_on>
         <sys_id>d321599edb10230044ccd426ca9619e3</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-02-13 11:36:58</sys_updated_on>
+        <sys_updated_on>2019-02-13 13:07:35</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role display_value="x_261673_resilient.user" name="x_261673_resilient.user">818db6abdb42230044ccd426ca9619dd</user_role>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.16</version>
+        <version>1.0.17</version>
     </sys_app>
     <sys_attachment action="INSERT_OR_UPDATE">
         <average_image_color>#0</average_image_color>

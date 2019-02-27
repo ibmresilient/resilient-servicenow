@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_script_include">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
@@ -26,8 +25,10 @@ function getMidServer(){
 	var MID_SERVER_CAPABILITY = "IBMResilientAccess";
 	
 	try{
+		//A mid-server must have ALL or IBMResilientAccess capabilities enabled
 		var gr = new GlideRecord(MID_SERVER_TABLE_NAME);
-		gr.addQuery("capability.capability", MID_SERVER_CAPABILITY);
+		var grQuery = "ALL," + MID_SERVER_CAPABILITY;
+		gr.addQuery("capability.capability", "IN", grQuery);
 		gr.query();
 
 		while(gr.next()) {
@@ -35,6 +36,7 @@ function getMidServer(){
 				return gr.agent.name;
 			 }
 		}
+
 	}
 	catch (e){
 		errMsg = "Failed to search for/find a MidServer " + e;
@@ -420,13 +422,13 @@ ResilientAPI.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-19 15:50:44</sys_created_on>
         <sys_id>d2882dbcdb51230044ccd426ca9619e1</sys_id>
-        <sys_mod_count>179</sys_mod_count>
+        <sys_mod_count>184</sys_mod_count>
         <sys_name>ResilientAPI</sys_name>
         <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
         <sys_update_name>sys_script_include_d2882dbcdb51230044ccd426ca9619e1</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-02-13 11:23:12</sys_updated_on>
+        <sys_updated_by>integration_developer</sys_updated_by>
+        <sys_updated_on>2019-02-27 16:22:20</sys_updated_on>
     </sys_script_include>
 </record_update>

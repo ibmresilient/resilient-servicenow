@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="IBM Resilient" section_id="70959552db50230044ccd426ca9619ec" sys_domain="global" table="incident" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>x_261673_resilient_reference_id</element>

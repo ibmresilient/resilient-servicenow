@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_scope_privilege">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
     <sys_scope_privilege action="INSERT_OR_UPDATE">
         <operation>read</operation>
         <source_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</source_scope>

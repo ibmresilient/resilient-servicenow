@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_properties">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
         <description>Password: The password of your IBM Resilient SNOW Integration user</description>
@@ -12,14 +11,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-16 12:00:23</sys_created_on>
         <sys_id>46c775bbdbc9230044ccd426ca9619a2</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>58</sys_mod_count>
         <sys_name>x_261673_resilient.ResilientUserPassword</sys_name>
         <sys_package display_value="IBM Resilient" source="x_261673_resilient">d321599edb10230044ccd426ca9619e3</sys_package>
         <sys_policy/>
         <sys_scope display_value="IBM Resilient">d321599edb10230044ccd426ca9619e3</sys_scope>
         <sys_update_name>sys_properties_46c775bbdbc9230044ccd426ca9619a2</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-02-13 15:05:32</sys_updated_on>
+        <sys_updated_by>integration_developer</sys_updated_by>
+        <sys_updated_on>2019-02-27 16:23:55</sys_updated_on>
         <type>password</type>
         <value/>
         <write_roles>x_261673_resilient.admin</write_roles>

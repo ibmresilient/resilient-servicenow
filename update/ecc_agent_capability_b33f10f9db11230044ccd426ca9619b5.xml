@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="ecc_agent_capability">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="ecc_agent_capability">
     <ecc_agent_capability action="INSERT_OR_UPDATE">
         <capability>IBMResilientAccess</capability>
         <capability_value>IBMResilientAccess</capability_value>

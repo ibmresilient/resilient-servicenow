@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="var_dictionary">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="var_dictionary">
     <var_dictionary action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_ws_version">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_version">
     <sys_ws_version action="INSERT_OR_UPDATE">
         <active>true</active>
         <deprecated>false</deprecated>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_documentation element="u_ibm_resilient_incident_id" label="ibm_resilient_incident_id" language="en" table="var__m_var_dictionary_e2df2ab5dbbd230044ccd426ca9619c7">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>u_ibm_resilient_incident_id</element>

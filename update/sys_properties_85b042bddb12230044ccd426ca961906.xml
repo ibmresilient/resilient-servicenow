@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_properties">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
         <description>Using MidServer: Tick the box if you are using a Mid-Server. Leave it blank if not</description>

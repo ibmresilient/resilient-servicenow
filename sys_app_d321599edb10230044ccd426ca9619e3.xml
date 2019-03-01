@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_app">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app">
     <sys_app action="INSERT_OR_UPDATE">
         <active>true</active>
         <enforce_license>log</enforce_license>
         <js_level>helsinki_es5</js_level>
         <licensable>true</licensable>
+        <license_category/>
         <license_model>none</license_model>
         <logo/>
-        <menu/>
+        <menu display_value="IBM Resilient">f0428323db82230044ccd426ca9619c3</menu>
         <name>IBM Resilient</name>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
@@ -23,15 +23,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-04 10:32:50</sys_created_on>
         <sys_id>d321599edb10230044ccd426ca9619e3</sys_id>
-        <sys_mod_count>19</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-02-13 15:05:49</sys_updated_on>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_updated_by>integration_developer</sys_updated_by>
+        <sys_updated_on>2019-02-27 16:24:16</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role display_value="x_261673_resilient.user" name="x_261673_resilient.user">818db6abdb42230044ccd426ca9619dd</user_role>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.18</version>
+        <version>1.0.19</version>
     </sys_app>
     <sys_attachment action="INSERT_OR_UPDATE">
         <average_image_color>#0</average_image_color>
@@ -43,6 +43,7 @@
         <image_width>1088</image_width>
         <size_bytes>5762</size_bytes>
         <size_compressed>5474</size_compressed>
+        <state/>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-01-31 06:48:25</sys_created_on>
         <sys_id>7cb2bb42db9b230044ccd426ca9619ed</sys_id>

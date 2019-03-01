@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_documentation element="x_261673_resilient_reference_link" label="IBM Resilient Reference Link" language="en" table="incident">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>x_261673_resilient_reference_link</element>

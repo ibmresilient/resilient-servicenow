@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="db_image">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
     <db_image action="INSERT_OR_UPDATE">
         <active>true</active>
         <category/>
@@ -33,6 +32,7 @@
         <image_width>1088</image_width>
         <size_bytes>5762</size_bytes>
         <size_compressed>5474</size_compressed>
+        <state/>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-12-11 10:21:11</sys_created_on>
         <sys_id>445a7979db12230044ccd426ca961954</sys_id>

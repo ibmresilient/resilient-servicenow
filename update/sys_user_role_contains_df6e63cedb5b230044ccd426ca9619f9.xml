@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_user_role_contains">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
     <sys_user_role_contains action="INSERT_OR_UPDATE">
         <contains display_value="x_261673_resilient.user" name="x_261673_resilient.user">818db6abdb42230044ccd426ca9619dd</contains>
         <role display_value="x_261673_resilient.admin" name="x_261673_resilient.admin">396d7a67db42230044ccd426ca9619f4</role>

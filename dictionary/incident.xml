@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="email_client=true,all_tables.query_hints=true,hasWorkflow=true,live_feed=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="54" text_index="true" type="collection">
-        <element label="IBM Resilient Reference ID" max_length="50" name="x_261673_resilient_reference_id" read_only="true" type="string"/>
-        <element label="IBM Resilient Reference Link" max_length="1024" name="x_261673_resilient_reference_link" read_only="true" type="url"/>
-        <element label="IBM Resilient Type" max_length="30" name="x_261673_resilient_type" read_only="true" type="string"/>
-    </element>
-</database>
